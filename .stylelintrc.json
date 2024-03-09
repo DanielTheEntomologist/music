@@ -1,6 +1,6 @@
 {
   "plugins": ["stylelint-scss"],
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-recommended-scss",
   "rules": {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
