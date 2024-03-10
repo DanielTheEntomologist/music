@@ -7,34 +7,34 @@
     <title>Music Recomendizer</title>
 
     <!-- Preload fonts -->
-    <link
+    <!-- <link
       rel="preload"
-      href="sass/fonts/SourceSansPro-Bold.woff2"
+      href="css/fonts/SourceSansPro-Bold.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="sass/fonts/SourceSansPro-Regular.woff2"
+      href="css/fonts/SourceSansPro-Regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="sass/fonts/SourceSansPro-SemiBold.woff2"
+      href="css/fonts/SourceSansPro-SemiBold.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="sass/fonts/SourceSansPro-Black.woff2"
+      href="css/fonts/SourceSansPro-Black.woff2"
       as="font"
       type="font/woff2"
       crossorigin
-    />
+    /> -->
 
     <!-- styles
     <link
@@ -60,59 +60,36 @@
 
   <body>
     <header>
-      <nav>
-        <row>
-          <div class="col-md-12">
-            <div class="splash">
-              <!-- <img src="images/background.jpg" /> -->
-              <div class="splash-text">
-                <h1>Taste</h1>
-                <p>Engage</p>
-                <p>in</p>
-                <p>Art</p>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
-        </row>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <div class="splash card bg-dark text-white">
+        <img
+          src="images/background.jpg"
+          class="card-img"
+          alt="background_image"
+        />
+        <div
+          class="card-img-overlay d-flex flex-column justify-content-center align-content-center"
+        >
+          <p class="card-text"></p>
+          <h1 class="card-title">Taste</h1>
+          <p class="card-text">Engage</p>
+          <p class="card-text">in</p>
+          <p class="card-text">art</p>
+        </div>
+        <div class="splash__overlay"></div>
+      </div>
+
+      <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item px-5">
+            <a class="nav-link" href="#home">Home </a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="#search">Search</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="#discover">Discover</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <div class="pages">
@@ -124,16 +101,16 @@
           </div>
         </div>
       </section>
-      <section class="page search active" id="search">
-        Homepage
+      <section class="page search" id="search">
+        Search
         <div class="container">
           <div class="row">
             <div class="col-md-6">Just some text</div>
           </div>
         </div>
       </section>
-      <section class="page discover active" id="discover">
-        Homepage
+      <section class="page discover" id="discover">
+        Discover
         <div class="container">
           <div class="row">
             <div class="col-md-6">Just some text</div>
@@ -141,5 +118,10 @@
         </div>
       </section>
     </div>
+    <footer>
+      <div class="container justify-content-center">
+        <p class="py-auto d-block">All rights reserved</p>
+      </div>
+    </footer>
   </body>
 </html>

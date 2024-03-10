@@ -1,31 +1,63 @@
-.dummyclass {
-  color: red;
+body {
+  background-color: $main-background-color;
+  color: $main-color;
+  height: 100%;
+  font-family: $main-font-regular;
 }
 
 .splash {
-  position: relative;
   color: $secondary-color;
-  font-family: $main-font-family;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-image: url('../images/background.jpg');
-  background-size: cover;
-  padding: 100px 100px 100px 100px;
+  text-align: center;
+  text-transform: uppercase;
+  & h1 {
+    padding-left: 4.5%; // compensate for the noncentered photo
+    font-family: $main-font-title;
+    font-size: 10vw;
+    // // space between letters
+    letter-spacing: 6vw;
+  }
+  & p {
+    font-family: $main-font-title;
+    font-size: 2vw;
+    padding-right: 1.5%; // compensate for the noncentered photo
+    // space between letters
+    letter-spacing: 0.75vw;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 41%;
+    background: linear-gradient(
+      to top,
+      $main-background-color,
+      rgba(0, 0, 0, 0)
+    );
+  }
 }
 
-.splash img {
-  position: relative;
-  width: 100%;
-  height: auto;
+nav {
+  border: 1px solid red;
+  .nav-link {
+    color: $main-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: $main-font-semibold;
+    font-size: 1.5rem;
+
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
-.splash .overlay {
-  position: absolute;
-  top: 75%;
-  left: 0;
-  width: 100%;
-  height: 25%; /* Adjust this to change how much of the bottom is blacked out */
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  // z-index: 100;
+.page {
+  display: none;
+  &.active {
+    display: block;
+  }
 }
