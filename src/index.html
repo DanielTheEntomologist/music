@@ -94,6 +94,7 @@
     </header>
     <div class="pages">
       <section class="page home active" id="home">
+        <!-- SONG LIST -->
         <div class="container songlist bg-dark">
           <div class="container song__wrapper">
             <div class="row song__title">Song Title</div>
@@ -110,36 +111,41 @@
             </div>
           </div>
         </div>
-        <div class="container subscribe__wrapper m-5">
+        <!-- SUBSCRIBE  -->
+        <div class="container subscribe__wrapper my-5">
           <div
             class="d-flex flex-column justify-content-between align-content-center mx-5 p-0"
           >
-            <h1 class="subscribe__header">Subscribe <strong>Now</strong></h1>
-            <div class="album-hero row">
+            <h1 class="subscribe__header">Subscribe <span>Now</span></h1>
+            <div class="row">
               <div
-                class="col-12 col-lg-4 d-flex flex-column justify-content-center"
+                class="col-12 order-sm-2 order-lg-1 col-lg-4 d-flex flex-column justify-content-center p-5"
               >
-                <button class="btn btn-danger">Join Now</button>
+                <button class="subscribe__button btn btn-danger">
+                  Join Now
+                </button>
               </div>
 
-              <div class="col-12 col-lg-8 album_hero__artist_card">
+              <div
+                class="col-12 order-sm-1 order-lg-2 col-lg-8 subscribe__artist_card flex-wrap"
+              >
                 <div
-                  class="album_hero__artist_card__artist d-flex flex-column align-content-center justify-content-center"
+                  class="subscribe__artist_card__artist d-flex flex-column align-content-center justify-content-center"
                 >
                   <div class="name p-1">Dean</div>
                   <div class="surname p-1">Hen<span>son </span></div>
                 </div>
                 <img
-                  class="album_hero__artist_card__image"
+                  class="subscribe__artist_card__image"
                   src="images/artist.jpg"
                   alt="artist_image"
                 />
+                <div class="subscribe__artist_card__info ms-auto">
+                  <h2 class="text-end">New album</h2>
+                  <p class="text-end">Available only for subscribers</p>
+                </div>
               </div>
               <!--   -->
-            </div>
-            <div class="col-12">
-              <p class="text-end">New album</p>
-              <p class="text-end">Available only for subscribers</p>
             </div>
           </div>
         </div>
