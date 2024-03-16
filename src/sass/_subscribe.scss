@@ -1,0 +1,67 @@
+.subscribe__wrapper {
+  background-image: url('../images/subscribe.jpg');
+  @include background-image();
+
+  * {
+    text-align: center;
+    color: $color-light;
+    // border: 1px solid red;
+  }
+
+  .subscribe__header {
+    position: relative;
+    top: 0;
+    transform: translate(0, -50%);
+  }
+
+  h1 {
+    font-family: $main-font-semibold;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 2em;
+    top: 0;
+  }
+
+  .album_hero__artist_card {
+    height: fit-content;
+    // width: 60%;
+    display: flex;
+    // background-color: alpha($color: #000000);
+
+    &__image {
+      position: relative;
+      left: 0;
+      width: 50%;
+      height: auto;
+    }
+
+    &__artist {
+      position: relative;
+
+      left: 0;
+      width: 50%;
+      top: 50%;
+
+      font-family: $main-font-title;
+      font-size: 3em;
+      letter-spacing: 0.35em;
+
+      .name {
+        text-align: end;
+      }
+
+      .surname {
+        position: relative;
+        text-align: end;
+        // left: 100%;
+        transform: translate(0.25em, 0);
+        z-index: 1;
+      }
+
+      .surname span {
+        position: absolute;
+        color: $accent-color;
+      }
+    }
+  }
+}

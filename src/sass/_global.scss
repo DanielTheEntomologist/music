@@ -1,7 +1,11 @@
-.dummyclass {
-  color: red;
+@mixin background-image() {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-// * {
-//   border: 1px solid red;
-// }
+@mixin center() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
