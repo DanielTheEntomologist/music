@@ -1,0 +1,17 @@
+$player-width: 500px;
+
+.song {
+  &__wrapper {
+    width: fit-content;
+  }
+
+  &__title {
+    color: $color-light;
+  }
+
+  &__player {
+    .green-audio-player {
+      width: $player-width;
+    }
+  }
+}
