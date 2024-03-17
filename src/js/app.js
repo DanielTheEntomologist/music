@@ -2,7 +2,7 @@
 
 import { settings, select, classNames } from './settings.js';
 
-import SongList from './SongList.js';
+import SongList from './songlist.js';
 
 const app = {
   init() {

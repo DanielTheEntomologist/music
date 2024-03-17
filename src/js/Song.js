@@ -33,7 +33,6 @@ class Song {
 
     wrapper.appendChild(thisSong.dom.element);
 
-    console.log('wrapper of a newly added song', wrapper);
     thisSong.player = new GreenAudioPlayer(thisSong.dom.player, {
       stopOthersOnPlay: true,
     });
