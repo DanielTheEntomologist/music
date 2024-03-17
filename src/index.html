@@ -136,7 +136,32 @@
         </div>
       </section>
       <section class="page search container" id="search">
-        <div class="">thinks for searching</div>
+        <div class="search__wrapper justify-content-center">
+          <h2 class="text-center align-content-center search__title">Search</h2>
+
+          <div class="input-group row searchbar__wrapper">
+            <div class="col-2 d-flex align-content-center text-end">
+              <h2 class="my-auto align-middle">Name</h2>
+            </div>
+            <input
+              type="search"
+              class="form-control rounded m-1 col-4"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <button
+              type="button"
+              class="btn btn-danger m-1 col-2 rounded"
+              data-mdb-ripple-init
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div clas="search__result_message"></div>
+        <div class="songlist" id="songlist"></div>
       </section>
 
       <section class="page discover container" id="discover">

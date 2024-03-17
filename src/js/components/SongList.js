@@ -1,6 +1,6 @@
 // import { select, templates } from './settings.js';
 
-import Song from './song.js';
+import Song from './Song.js';
 // import { utils } from './utils.js';
 
 class SongList {

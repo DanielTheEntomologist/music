@@ -1,0 +1,10 @@
+.search__title {
+  color: $color-light;
+  text-transform: uppercase;
+}
+
+.searchbar {
+  &__wrapper {
+    width: $player-width;
+  }
+}

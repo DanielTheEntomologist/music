@@ -1,7 +1,7 @@
-import { select, templates } from './settings.js';
+import { select, templates } from '../settings.js';
 
 import GreenAudioPlayer from '../../vendor/greenplayer/js/main.js';
-import { utils } from './utils.js';
+import { utils } from '../utils.js';
 
 class Song {
   constructor(data, wrapper) {

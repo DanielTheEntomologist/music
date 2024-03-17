@@ -28,6 +28,11 @@ export const select = {
     categories: '.song__description__tags',
     ranking: '.song__description__ranking',
   },
+  searchbar: {
+    wrapper: '.searchbar_wrapper',
+    input: '.searchbar_wrapper > input',
+    button: '.searchbar_wrapper > button',
+  },
 };
 
 export const classNames = {
