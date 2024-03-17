@@ -10,14 +10,23 @@ export const select = {
   all: {
     songs: '.page.active #songlist > .song',
     formInputs: 'input, select',
+    pages: '.page',
   },
 
   nav: {
-    links: '.main-nav a',
+    navbar: '.navbar',
+    links: '.navbar a',
+    pages: '.page',
   },
   home: {
     intro: '.homepage__intro',
     actionLinks: '.homepage__intro__action',
+  },
+  song: {
+    playerWrapper: '.song__player__wrapper',
+    player: '.song__player',
+    categories: '.song__description__tags',
+    ranking: '.song__description__ranking',
   },
 };
 
@@ -48,7 +57,7 @@ export const settings = {
 };
 
 export const templates = {
-  // song: Handlebars.compile(
-  //   document.querySelector(select.templateOf.song).innerHTML
-  // ),
+  song: Handlebars.compile(
+    document.querySelector(select.templateOf.song).innerHTML
+  ),
 };

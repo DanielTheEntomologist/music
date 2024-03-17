@@ -45,6 +45,15 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- import script via cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
+      integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+
     <script src="js/app.js" type="module" defer></script>
     <!-- <script src="vendor/greenplayer/js/green-audio-player.js" defer></script> -->
   </head>
@@ -69,8 +78,8 @@
         <div class="splash__overlay"></div>
       </div>
 
-      <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
-        <ul class="navbar-nav">
+      <nav class="navbar navbar-dark justify-content-center">
+        <ul class="navbar-nav d-flex flex-row justify-content-center">
           <li class="nav-item px-5">
             <a class="nav-link" href="#home">Home </a>
           </li>
@@ -83,37 +92,10 @@
         </ul>
       </nav>
     </header>
-    <div class="pages">
-      <section class="page home active" id="home">
+    <div class="pages" id="pages">
+      <section class="page home active container" id="home">
         <!-- SONG LIST -->
-        <div class="container songlist" id="songlist">
-          <div
-            class="container song__wrapper d-flex flex-column align-content-center my-3"
-          >
-            <h3 class="song__title text-center my-3">Song Title</h3>
-            <div class="song__player d-flex justify-content-center">
-              <div class="greenplayer">
-                <audio>
-                  <source
-                    src="db/songs/At_The_Top_David_Renda.mp3"
-                    type="audio/mpeg"
-                  />
-                </audio>
-              </div>
-            </div>
-            <div
-              class="song__description d-flex flex-row justify-content-between m-2"
-            >
-              <div class="song__description__tags text-start">
-                Categories: Soft Jazz
-              </div>
-
-              <div class="song__description__ranking text-end">
-                4th in the ranking
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="songlist" id="songlist"></div>
         <!-- SUBSCRIBE  -->
         <div class="container subscribe__wrapper my-5">
           <div
@@ -153,11 +135,13 @@
           </div>
         </div>
       </section>
-      <section class="page search" id="search">thinks for searching</section>
+      <section class="page search container" id="search">
+        <div class="">thinks for searching</div>
+      </section>
 
-      <section class="page discover" id="discover">
-        Discover
-        <div class="container">
+      <section class="page discover container" id="discover">
+        <div class="">
+          Discover
           <div class="row">
             <div class="col-md-6">Just some text</div>
           </div>
@@ -169,5 +153,34 @@
         <p class="py-auto d-block">All rights reserved</p>
       </div>
     </footer>
+
+    <script id="template-song" type="text/x-handlebars-template">
+      <div
+        class='container song__wrapper d-flex flex-column align-content-center my-3'
+      >
+        <h3 class='song__title text-center my-3'>{{author}} - {{title}}</h3>
+        <div class='song__player__wrapper d-flex justify-content-center'>
+          <div class='song__player'>
+            <audio>
+              <source src='db/songs/{{filename}}' type='audio/mpeg' />
+            </audio>
+          </div>
+        </div>
+        <div
+          class='song__description d-flex flex-row justify-content-between m-2'
+        >
+          <div class='song__description__tags text-start'>
+            Categories:
+            {{#each categories}}
+              <span>{{this}}</span>{{#unless @last}}<span>, </span>{{/unless}}
+            {{/each}}
+          </div>
+
+          <div class='song__description__ranking text-end'>
+            {{ranking}}. in the ranking
+          </div>
+        </div>
+      </div>
+    </script>
   </body>
 </html>
