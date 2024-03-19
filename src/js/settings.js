@@ -12,6 +12,11 @@ export const select = {
     formInputs: 'input, select',
     pages: '.page',
   },
+  page: {
+    home: '#home',
+    search: '#search',
+    discover: '#discover',
+  },
 
   nav: {
     navbar: '.navbar',
@@ -29,9 +34,9 @@ export const select = {
     ranking: '.song__description__ranking',
   },
   searchbar: {
-    wrapper: '.searchbar_wrapper',
-    input: '.searchbar_wrapper > input',
-    button: '.searchbar_wrapper > button',
+    wrapper: '.searchbar__wrapper',
+    input: '.searchbar input',
+    button: '.searchbar button',
   },
 };
 

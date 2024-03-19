@@ -136,32 +136,42 @@
         </div>
       </section>
       <section class="page search container" id="search">
-        <div class="search__wrapper justify-content-center">
-          <h2 class="text-center align-content-center search__title">Search</h2>
-
-          <div class="input-group row searchbar__wrapper">
-            <div class="col-2 d-flex align-content-center text-end">
-              <h2 class="my-auto align-middle">Name</h2>
-            </div>
-            <input
-              type="search"
-              class="form-control rounded m-1 col-4"
-              placeholder="Search"
-              aria-label="Search"
-              aria-describedby="search-addon"
-            />
-            <button
-              type="button"
-              class="btn btn-danger m-1 col-2 rounded"
-              data-mdb-ripple-init
-            >
+        <div
+          class="search_wrapper d-flex flex-column justify-content-center align-items-center"
+        >
+          <div
+            class="searchbar__wrapper searchbar d-flex flex-column justify-content-center align-items-center"
+          >
+            <h2 class="text-center align-content-center search__title">
               Search
-            </button>
-          </div>
-        </div>
+            </h2>
 
-        <div clas="search__result_message"></div>
-        <div class="songlist" id="songlist"></div>
+            <div
+              class="input-group row searchbar__wrapper align-content-center"
+            >
+              <div class="col-3 d-flex justify-content-end">
+                <h2 class="my-auto align-middle">Name</h2>
+              </div>
+              <input
+                type="search"
+                class="form-control rounded m-1 col-4"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <button
+                type="button"
+                class="btn btn-danger m-1 col-2 rounded"
+                data-mdb-ripple-init
+              >
+                Search
+              </button>
+            </div>
+          </div>
+
+          <div clas="search__result_message"></div>
+          <div class="songlist" id="songlist"></div>
+        </div>
       </section>
 
       <section class="page discover container" id="discover">
@@ -171,6 +181,7 @@
             <div class="col-md-6">Just some text</div>
           </div>
         </div>
+        <div class="songlist" id="songlist"></div>
       </section>
     </div>
     <footer>

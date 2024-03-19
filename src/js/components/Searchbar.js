@@ -12,6 +12,9 @@ class Searchbar {
     thisSearchbar.dom.button = thisSearchbar.dom.wrapper.querySelector(
       select.searchbar.button
     );
+    thisSearchbar.initActions();
+
+    console.log('thisSearchbar:', thisSearchbar);
   }
 
   initActions() {
@@ -24,7 +27,15 @@ class Searchbar {
     });
     thisSearchbar.dom.button.addEventListener('click', function (event) {
       event.preventDefault();
-      thisSearchbar.announce();
+      if (
+        thisSearchbar.dom.input.value === '' ||
+        thisSearchbar.dom.input.value === null ||
+        thisSearchbar.dom.input.value === undefined
+      ) {
+        thisSearchbar.dom.input.focus();
+      } else {
+        thisSearchbar.announce();
+      }
     });
   }
   announce() {
@@ -36,6 +47,7 @@ class Searchbar {
         value: thisSearchbar.dom.input.value,
       },
     });
+    console.log(event);
     thisSearchbar.dom.wrapper.dispatchEvent(event);
   }
 }

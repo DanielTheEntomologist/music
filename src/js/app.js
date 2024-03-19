@@ -3,6 +3,7 @@
 import { settings, select, classNames } from './settings.js';
 
 import SongList from './components/SongList.js';
+import Searchbar from './components/Searchbar.js';
 
 const app = {
   init() {
@@ -10,7 +11,12 @@ const app = {
     console.log('app.init()');
     thisApp.initPages();
 
-    thisApp.initData();
+    thisApp.initData().then(() => {
+      thisApp.initSongLists();
+      thisApp.initSearchbar();
+    });
+
+    thisApp.initSearch();
   },
 
   initData() {
@@ -19,15 +25,21 @@ const app = {
     const url = settings.db.url + '/' + settings.db.songs;
 
     thisApp.data = {};
-    fetch(url)
-      .then(function (rawResponse) {
-        return rawResponse.json();
-      })
-      .then(function (parsedResponse) {
-        thisApp.data.songs = parsedResponse;
-        thisApp.initSongList();
-      });
-    console.log('thisApp.data:', thisApp.data);
+
+    return new Promise(function (resolve, reject) {
+      fetch(url)
+        .then(function (rawResponse) {
+          return rawResponse.json();
+        })
+        .then(function (parsedResponse) {
+          thisApp.data.songs = parsedResponse;
+          resolve();
+        })
+        .catch((error) => {
+          reject(error);
+        });
+      console.log('thisApp.data:', thisApp.data);
+    });
   },
 
   initPages: function () {
@@ -86,10 +98,44 @@ const app = {
       );
     }
   },
-  initSongList: function () {
+  initSongLists: function () {
     const thisApp = this;
-    const songlistWrapper = document.querySelector(select.containerOf.songlist);
-    thisApp.songList = new SongList(songlistWrapper, thisApp.data.songs);
+
+    const homeSonglistWrapper = document.querySelector(
+      select.page.home + ' ' + select.containerOf.songlist
+    );
+
+    const searchSonglistWrapper = document.querySelector(
+      select.page.search + ' ' + select.containerOf.songlist
+    );
+    const discoverSonglistWrapper = document.querySelector(
+      select.page.discover + ' ' + select.containerOf.songlist
+    );
+
+    thisApp.homeSongList = new SongList(
+      homeSonglistWrapper,
+      thisApp.data.songs
+    );
+    thisApp.searchSongList = new SongList(searchSonglistWrapper, []);
+    thisApp.discoverSongList = new SongList(discoverSonglistWrapper, [
+      thisApp.data.songs[0],
+    ]);
+  },
+
+  initSearchbar: function () {
+    const thisApp = this;
+    const searchbarWrapper = document.querySelector(select.searchbar.wrapper);
+    thisApp.searchbar = new Searchbar(searchbarWrapper);
+  },
+
+  initSearch: function () {
+    const thisApp = this;
+    const searchbarWrapper = document.querySelector(select.searchbar.wrapper);
+    searchbarWrapper.addEventListener('search', function (event) {
+      event.preventDefault();
+      console.log('event.detail.value:', event.detail.value);
+      thisApp.songList.filterSongs(event.detail.value);
+    });
   },
 };
 
