@@ -116,9 +116,14 @@ const app = {
       homeSonglistWrapper,
       thisApp.data.songs
     );
+
     thisApp.searchSongList = new SongList(searchSonglistWrapper, []);
+
+    // random int between 0 and len of songs
+    const randomIndex = Math.floor(Math.random() * thisApp.data.songs.length);
+
     thisApp.discoverSongList = new SongList(discoverSonglistWrapper, [
-      thisApp.data.songs[0],
+      thisApp.data.songs[randomIndex],
     ]);
   },
 

@@ -1,17 +1,30 @@
 body {
   background-color: $main-background-color;
   color: $main-color;
-  height: 100%;
+  // height: 100%;
   font-family: $main-font-regular;
+  // overflow: hidden;
+}
+
+.splash.card {
+  border: none;
 }
 
 .splash {
   color: $secondary-color;
   text-align: center;
   text-transform: uppercase;
+  overflow: hidden;
+  transform: scale(1);
+
+  .card-img {
+    width: 103%;
+    // height: 105%;
+    object-fit: cover;
+  }
 
   h1 {
-    padding-left: 4.5%; // compensate for the noncentered photo
+    padding-left: 7.5%; // compensate for the noncentered photo
     font-family: $main-font-title;
     font-size: 10vw;
     // // space between letters
@@ -21,7 +34,7 @@ body {
   p {
     font-family: $main-font-title;
     font-size: 2vw;
-    padding-right: 1.5%; // compensate for the noncentered photo
+    padding-left: 1.75%; // compensate for the noncentered photo
     // space between letters
     letter-spacing: 0.75vw;
   }
@@ -31,7 +44,7 @@ body {
     top: 60%;
     left: 0;
     width: 100%;
-    height: 41%;
+    height: 40%;
     background: linear-gradient(
       to top,
       $main-background-color,

@@ -8,8 +8,6 @@ class SongList {
     const thisSongList = this;
     thisSongList.dom = {};
     thisSongList.dom.element = wrapper;
-    // thisApp.data = {};
-    // thisApp.data.songs = songs;
 
     thisSongList.songs = [];
     for (let songDataId in songs) {

@@ -19,8 +19,8 @@ export const select = {
   },
 
   nav: {
-    navbar: '.navbar',
-    links: '.navbar a',
+    navbar: '.navba1',
+    links: '.navbar1 a',
     pages: '.page',
   },
   home: {
