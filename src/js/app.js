@@ -139,8 +139,22 @@ const app = {
     searchbarWrapper.addEventListener('search', function (event) {
       event.preventDefault();
       console.log('event.detail.value:', event.detail.value);
-      thisApp.songList.filterSongs(event.detail.value);
+      thisApp.filterSongs(event.detail.value, thisApp.searchSongList);
     });
+  },
+  filterSongs: function (searchString, songList) {
+    const thisApp = this;
+    const filteredSongs = thisApp.data.songs.filter((song) => {
+      return song.title.toLowerCase().includes(searchString.toLowerCase());
+    });
+
+    songList.refreshSonglist(filteredSongs);
+
+    if (filteredSongs.length == 0) {
+      songList.dom.element.innerHTML = `<div class="song-empty">
+        <h2>No songs found</h2>
+      </div>`;
+    }
   },
 };
 

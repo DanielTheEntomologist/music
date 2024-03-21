@@ -6,36 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Music Recomendizer</title>
 
-    <!-- Preload fonts -->
-    <!-- <link
-      rel="preload"
-      href="css/fonts/SourceSansPro-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="css/fonts/SourceSansPro-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="css/fonts/SourceSansPro-SemiBold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="css/fonts/SourceSansPro-Black.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    /> -->
-
     <!-- plugins -->
     <link
       rel="stylesheet"
@@ -55,7 +25,6 @@
     ></script>
 
     <script src="js/app.js" type="module" defer></script>
-    <!-- <script src="vendor/greenplayer/js/green-audio-player.js" defer></script> -->
   </head>
 
   <body>
@@ -149,7 +118,7 @@
             <div
               class="input-group row searchbar__wrapper align-content-center"
             >
-              <div class="col-3 d-flex justify-content-end">
+              <div class="col-2 d-flex justify-content-end">
                 <h2 class="my-auto align-middle">Name</h2>
               </div>
               <input
@@ -175,11 +144,12 @@
       </section>
 
       <section class="page discover container" id="discover">
-        <div class="">
-          Discover
-          <div class="row">
-            <div class="col-md-6">Just some text</div>
-          </div>
+        <div
+          class="discover_wrapper d-flex flex-column justify-content-center align-items-center"
+        >
+          <h2 class="text-center align-content-center discover__title">
+            Discover
+          </h2>
         </div>
         <div class="songlist" id="songlist"></div>
       </section>
