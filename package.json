@@ -28,8 +28,7 @@
     "watch:browsersync": "browser-sync start --server dist --files \"dist/**/*\"",
     "watch:sassprefixer": "onchange \"src/sass/**/*.scss\" -- npm run build-dev",
     "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist",
-    "start": "npm-run-all build startnode",
-    "startnode": "node server.mjs"
+    "start": "npm run build && node server.mjs"
   },
   "keywords": [],
   "author": "",
