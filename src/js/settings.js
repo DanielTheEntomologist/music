@@ -38,6 +38,9 @@ export const select = {
     input: '.searchbar input',
     button: '.searchbar button',
   },
+  discover: {
+    button: '.discover button',
+  },
 };
 
 export const classNames = {

@@ -1,4 +1,10 @@
-.discover__title {
-  color: $color-light;
-  text-transform: uppercase;
+.discover {
+  &__title {
+    color: $color-light;
+    text-transform: uppercase;
+  }
+  &__encouragement {
+    font-size: 1.5em;
+    color: $color-light;
+  }
 }

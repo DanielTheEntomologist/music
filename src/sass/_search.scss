@@ -1,6 +1,8 @@
-.search__title {
-  color: $color-light;
-  text-transform: uppercase;
+.search {
+  &__title {
+    color: $color-light;
+    text-transform: uppercase;
+  }
 }
 
 .searchbar {

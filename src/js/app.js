@@ -14,6 +14,7 @@ const app = {
     thisApp.initData().then(() => {
       thisApp.initSongLists();
       thisApp.initSearchbar();
+      thisApp.initDiscover();
     });
 
     thisApp.initSearch();
@@ -142,6 +143,14 @@ const app = {
       thisApp.filterSongs(event.detail.value, thisApp.searchSongList);
     });
   },
+  initDiscover: function () {
+    const thisApp = this;
+    const discoverButton = document.querySelector(select.discover.button);
+    discoverButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      thisApp.randomizeSong();
+    });
+  },
   filterSongs: function (searchString, songList) {
     const thisApp = this;
     const filteredSongs = thisApp.data.songs.filter((song) => {
@@ -155,6 +164,11 @@ const app = {
         <h2>No songs found</h2>
       </div>`;
     }
+  },
+  randomizeSong: function () {
+    const thisApp = this;
+    const randomIndex = Math.floor(Math.random() * thisApp.data.songs.length);
+    thisApp.discoverSongList.refreshSonglist([thisApp.data.songs[randomIndex]]);
   },
 };
 
