@@ -1,4 +1,5 @@
 .subscribe__wrapper {
+  margin-top: 6rem !important;
   background-image: url('../images/subscribe.jpg');
   @include background-image();
 
@@ -10,9 +11,15 @@
     letter-spacing: 0.35em;
     text-align: center;
 
-    .span {
-      font-family: $main-font-title;
-      font-weight: 900;
+    font-size: min(100px, 6vw);
+    letter-spacing: 20px;
+    line-height: 27px;
+    color: $color-light;
+    font-weight: $font-semibold;
+    font-family: $main-font-family;
+
+    span {
+      font-weight: $font-extrabold;
     }
   }
 
