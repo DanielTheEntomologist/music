@@ -68,8 +68,14 @@
 
       font-family: $main-font-title;
       font-weight: normal;
-      font-size: 3em;
-      letter-spacing: 0.35em;
+      // font-size: 3em;
+      // letter-spacing: 0.35em;
+
+      font-size: min(100px, 6vw);
+      letter-spacing: min(20px, 0.6vw);
+      // line-height: 27px;
+      color: $color-light;
+      font-weight: $font-extrabold;
 
       .name {
         text-align: end;
