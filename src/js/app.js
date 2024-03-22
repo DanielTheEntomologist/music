@@ -39,7 +39,6 @@ const app = {
         .catch((error) => {
           reject(error);
         });
-      console.log('thisApp.data:', thisApp.data);
     });
   },
 
@@ -48,12 +47,10 @@ const app = {
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
 
     const navLinks = document.querySelectorAll(select.nav.links);
-    console.log('navLinks:', navLinks);
+
     const homeNavLinks = document.querySelectorAll(select.home.actionLinks);
-    console.log('homeNavLinks:', homeNavLinks);
 
     thisApp.navLinks = [...navLinks, ...homeNavLinks];
-    console.log('thisApp.navLinks:', thisApp.navLinks);
 
     // get url hash
     const idFromHash = window.location.hash.replace('#/', '');
@@ -103,6 +100,7 @@ const app = {
       );
     }
   },
+
   initSongLists: function () {
     const thisApp = this;
 
@@ -143,7 +141,7 @@ const app = {
     const searchbarWrapper = document.querySelector(select.searchbar.wrapper);
     searchbarWrapper.addEventListener('search', function (event) {
       event.preventDefault();
-      console.log('event.detail.value:', event.detail.value);
+
       thisApp.filterSongs(event.detail.value, thisApp.searchSongList);
     });
   },

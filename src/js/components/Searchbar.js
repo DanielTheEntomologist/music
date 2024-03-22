@@ -13,8 +13,6 @@ class Searchbar {
       select.searchbar.button
     );
     thisSearchbar.initActions();
-
-    console.log('thisSearchbar:', thisSearchbar);
   }
 
   initActions() {
@@ -47,7 +45,6 @@ class Searchbar {
         value: thisSearchbar.dom.input.value,
       },
     });
-    console.log(event);
     thisSearchbar.dom.wrapper.dispatchEvent(event);
   }
 }
