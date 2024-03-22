@@ -9,9 +9,13 @@ $player-width: 500px;
     color: $color-light;
   }
 
-  &__player {
-    .green-audio-player {
-      width: $player-width;
-    }
+  &__player.green-audio-player {
+    width: $player-width;
   }
+}
+.green-audio-player .slider .gap-progress .pin {
+  background-color: $color-red;
+}
+.green-audio-player .slider .gap-progress {
+  background-color: $color-red;
 }
