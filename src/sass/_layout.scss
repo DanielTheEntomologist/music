@@ -24,19 +24,22 @@ body {
   }
 
   h1 {
-    padding-left: 7.5%; // compensate for the noncentered photo
-    font-family: $main-font-title;
+    font-family: $main-font-family;
+    font-weight: $font-extrabold;
     font-size: 10vw;
-    // // space between letters
     letter-spacing: 6vw;
+
+    padding-left: 7.5%; // compensate for the noncentered photo
   }
 
   p {
-    font-family: $main-font-title;
+    font-family: $main-font-family;
+    font-weight: $font-extrabold;
     font-size: 2vw;
+    letter-spacing: 0.75vw;
+
     padding-left: 1.75%; // compensate for the noncentered photo
     // space between letters
-    letter-spacing: 0.75vw;
   }
 
   &__overlay {
@@ -78,4 +81,10 @@ nav {
   &.active {
     display: block;
   }
+}
+
+footer {
+  color: $color-light;
+  text-align: center;
+  font-family: $main-font-regular;
 }

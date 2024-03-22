@@ -58,6 +58,10 @@ const app = {
     // get url hash
     const idFromHash = window.location.hash.replace('#/', '');
 
+    if (idFromHash == 'joinnow') {
+      return;
+    }
+
     // find if any page is matching hash from url
     let pageHashCorrect = false;
     for (let page of thisApp.pages) {
