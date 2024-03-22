@@ -88,7 +88,11 @@ nav {
 }
 
 footer {
-  color: $color-light;
+  font-size: 20px;
+  letter-spacing: 4px;
+  line-height: 27px;
+  color: $color-white;
+  font-weight: $font-normal;
+  font-family: $main-font-family;
   text-align: center;
-  font-family: $main-font-regular;
 }
