@@ -158,7 +158,13 @@ const app = {
   filterSongs: function (searchString, songList) {
     const thisApp = this;
     const filteredSongs = thisApp.data.songs.filter((song) => {
-      return song.title.toLowerCase().includes(searchString.toLowerCase());
+      const titleMatch = song.title
+        .toLowerCase()
+        .includes(searchString.toLowerCase());
+      const authorMatch = song.author
+        .toLowerCase()
+        .includes(searchString.toLowerCase());
+      return titleMatch || authorMatch;
     });
 
     songList.refreshSonglist(filteredSongs);
