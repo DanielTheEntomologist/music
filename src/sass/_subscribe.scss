@@ -21,6 +21,18 @@
     font-weight: $font-semibold;
     font-family: $main-font-family;
 
+    // media q
+    @media (max-width: 400px) {
+      div:before {
+        content: '';
+        margin-left: -100%;
+      }
+      div:after {
+        content: '';
+        margin-right: -100%;
+      }
+    }
+
     span {
       font-weight: $font-extrabold;
     }
