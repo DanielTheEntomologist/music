@@ -6,9 +6,7 @@
   .subscribe__header {
     position: relative;
     top: 0;
-    color: $color-light;
     transform: translate(0, -50%);
-    letter-spacing: 0.35em;
     text-align: center;
 
     font-size: min(100px, 6vw);
@@ -61,13 +59,11 @@
 
     &__artist {
       position: relative;
-      color: $color-light;
       left: 0;
       width: 50%;
       top: 50%;
 
       font-family: $main-font-title;
-      font-weight: normal;
       // font-size: 3em;
       // letter-spacing: 0.35em;
 
