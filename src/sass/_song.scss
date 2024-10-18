@@ -1,5 +1,6 @@
-$player-width: 500px;
-
+$min-player-width: 320px;
+$max-player-width: 500px;
+$player-width: clamp($min-player-width, 80vw, $max-player-width);
 .song {
   &__wrapper {
     width: fit-content;
