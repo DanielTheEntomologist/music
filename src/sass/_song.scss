@@ -1,4 +1,4 @@
-$min-player-width: 320px;
+$min-player-width: 280px;
 $max-player-width: 500px;
 $player-width: clamp($min-player-width, 80vw, $max-player-width);
 .song {
