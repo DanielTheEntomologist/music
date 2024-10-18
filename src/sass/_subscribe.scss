@@ -3,6 +3,11 @@
   background-image: url('../images/subscribe.jpg');
   @include background-image();
 
+  a {
+    text-decoration: none;
+    color: $color-light;
+  }
+
   .subscribe__header {
     position: relative;
     top: 0;
